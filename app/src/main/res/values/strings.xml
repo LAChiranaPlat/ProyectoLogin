@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">ProyectoLogin</string>
+    <string name="tituloLoginOK">Bienvenidos a Android Developer</string>
+    <string name="messageLoginOK">Formulario de Identificación de Usuario</string>
+    <string name="tituloLoginError">Error en la Identificación de Usuario</string>
+    <string name="messageLoginError">Los campos no deben estar vacios, ingrese su cuenta y clave de acceso</string>
+    <string name="btnOkLogin">Continuar</string>
+    <string name="btnNoLogin">Salir</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

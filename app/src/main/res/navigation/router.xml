@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/router"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/blankFragmentA"
+        android:name="com.example.proyectologin.ui.fragment.BlankFragmentA"
+        android:label="fragment_blank_a"
+        tools:layout="@layout/fragment_blank_a" >
+        <action
+            android:id="@+id/action_blankFragmentA_to_blankFragmentB"
+            app:destination="@id/blankFragmentB" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragmentB"
+        android:name="com.example.proyectologin.ui.fragment.BlankFragmentB"
+        android:label="fragment_blank_b"
+        tools:layout="@layout/fragment_blank_b" >
+        <action
+            android:id="@+id/action_blankFragmentB_to_blankFragmentA"
+            app:destination="@id/blankFragmentA" />
+        <action
+            android:id="@+id/action_blankFragmentB_to_blankFragmentC"
+            app:destination="@id/blankFragmentC" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragmentC"
+        android:name="com.example.proyectologin.ui.fragment.BlankFragmentC"
+        android:label="fragment_blank_c"
+        tools:layout="@layout/fragment_blank_c" >
+        <action
+            android:id="@+id/action_blankFragmentC_to_blankFragmentB"
+            app:destination="@id/blankFragmentB" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.example.proyectologin.HomeScreen"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreen_to_blankFragmentA"
+            app:destination="@id/blankFragmentA"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeScreen_to_blankFragmentB"
+            app:destination="@id/blankFragmentB"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_homeScreen_to_blankFragmentC"
+            app:destination="@id/blankFragmentC" />
+    </fragment>
+</navigation>
